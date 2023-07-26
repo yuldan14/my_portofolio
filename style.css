@@ -419,6 +419,7 @@ footer{
         margin: 2rem;
         font-size: 12px;
         width: 300px;
+        box-sizing: border-box;
     }
     footer{
         padding-top: 500px;
