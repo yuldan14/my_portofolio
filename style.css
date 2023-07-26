@@ -141,22 +141,23 @@ header .logo{
 
 .hero .contact{
     top: 50px;
-    width: fit-content;
-    left: 33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     position: relative;
-    background-color: var(--info);
-    border-radius: 23px;
-    padding: .3em 1em;
     box-sizing: border-box;
 
 }
 
 .hero .contact a{
     color: white;
+    background-color: var(--info);
+    border-radius: 23px;
+    padding: .4em 1.3em;
     
 }
 
-.hero .desc .contact:hover{
+.hero .desc .contact a:hover{
     box-shadow: 1px 1px 10px 1px yellow;
     transition: .2s;
 }
@@ -215,7 +216,7 @@ header .logo{
     width: 300px;
     height: max-content;
     padding: 50px;
-    margin: 5rem 5rem;
+    margin: 5rem auto;
     border-radius: 23px;
     
 }
@@ -323,6 +324,7 @@ header .logo{
     font-weight: 500;
     line-height: 30px;
     justify-content: space-around;
+    cursor: default;
 }
 
 
@@ -345,11 +347,17 @@ header .logo{
     color: var(--dark);
 }
 
+.middle .list ul li a:hover{
+    color: var(--info);
+    transition: .2;
+}
+
 footer{
     background: url(assest/bg-grey.png);
     color: var(--dark);
     text-align: center;
     padding: 30px 0;
+    cursor: default;
 }
 
 
@@ -372,6 +380,7 @@ footer{
     flex-wrap: wrap;
     margin-bottom: 100px;
     background-repeat: no-repeat;
+    cursor: default;
 }
 .profil .kiri, .profil .kanan{
     width: 50%;
@@ -398,6 +407,7 @@ footer{
     top: 7rem;
     text-align: center;
     width: 600px;
+    box-sizing: border-box;
 }
 
 .profil .kanan .deskripsi h2{
@@ -412,12 +422,26 @@ footer{
 }
 
 
-@media (max-width: 1069px){
+
+@media (max-width: 1440px){
+    .kontak{
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1024px){
     .left, .middle, .right{
         width: 150px;
     }
     .contact{
         font-size: 12px;
+    }
+
+
+    .profil .kanan .deskripsi{
+        width: fit-content;
+        box-sizing: border-box;
+        padding: 0 30px;
     }
 }
 /*Tablet*/
@@ -451,14 +475,63 @@ footer{
     }
 }
 
+@media (max-width: 768px){
+    .profil{
+        background-position-y: -130px;
+    }
+    .profil .kanan .deskripsi{
+        box-sizing: border-box;
+        width: fit-content;
+        padding: 0 30px;
+    }
+}
+
 /*Phone*/
-@media (max-width: 600px){
+@media (max-width: 425px){
     header .navbar{
-        font-size: 12px;
+        font-size: 10px;
     }
     .hero{
         background-position-x: -95px;
     }
+    .interest .header{
+        display: flex;
+        justify-content: center;
+    }
+    .excel, .ppt, .website, .data{
+        margin: 2rem;
+        font-size: 12px;
+        width: 300px;
+        box-sizing: border-box;
+    }
+    footer{
+        padding-top: 500px;
+    }
+
+
+
+
+    .profil{
+        box-sizing: border-box;
+        width: 100%;
+    }
+   .profil .kiri, .profil .kanan{
+    width: 100%;
+   }
+   .profil .kiri{
+    margin-top: 130px;
+   }
+   .profil .kiri .foto{
+    width: 150px;
+    height: 200px;
+   }
+   .profil .kanan .deskripsi{
+    width: 100%;
+    font-size: 12px;
+    padding: 0px 30px;
+    box-sizing: border-box;
+   }
+
 }
 @media (max-width: 375px){
     header .navbar{
@@ -506,8 +579,34 @@ footer{
    .profil .kanan .deskripsi{
     width: 100%;
     font-size: 12px;
+    padding: 0px 30px;
+    box-sizing: border-box;
    }
 
+}
+
+@media(max-width: 320px){
+    header .navbar{
+        font-size: 7px;
+
+    }
+    .profil{
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    .profil .kanan .deskripsi{
+        width: 100%;
+        font-size: 12px;
+        padding: 0px 30px;
+        box-sizing: border-box;
+        height: fit-content;
+       }
+    .kontak{
+        position: relative;
+    }
+    footer{
+        padding-top: 900px;
+    }
 }
 
 
