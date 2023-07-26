@@ -350,9 +350,12 @@ footer{
 }
 
 
-@media (max-width: 1010px){
+@media (max-width: 1069px){
     .left, .middle, .right{
         width: 150px;
+    }
+    .contact{
+        font-size: 12px;
     }
 }
 /*Tablet*/
@@ -390,6 +393,23 @@ footer{
 @media (max-width: 600px){
     header .navbar{
         font-size: 12px;
+    }
+}
+@media (max-width: 425px){
+    header .navbar{
+        font-size: 9px;
+    }
+    .contact{
+        font-size: 20px;
+    }
+    .interest .header{
+        padding: 40px auto;
+    }
+    .excel, .ppt, .website, .data{
+        margin: 2rem;
+    }
+    footer{
+        padding-top: 500px;
     }
 }
 
