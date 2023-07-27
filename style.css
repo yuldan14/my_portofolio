@@ -760,12 +760,21 @@ footer{
      .konten .myskill .card .more{
          margin-left: 10rem;
          font-size: 12px;
-     }
+        }
+        
+    }
     
-}
-
-/*Phone*/
+    /*Phone*/
 @media (min-width: 376px) and (max-width: 425px){
+    header{
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 3rem;
+    }
+    header .logo{
+
+            width: 100%;
+    }
     header .navbar{
         font-size: 10px;
     }
@@ -843,6 +852,14 @@ footer{
 }
 
 @media (min-width: 321px) and (max-width: 375px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 3rem;
+    }
+    header .logo{
+        width: 100%;
+    }
     header .navbar{
         font-size: 9px;
     }
