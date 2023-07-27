@@ -514,6 +514,15 @@ footer{
 
 
 
+.konten{
+    color: var(--danger);
+    position: relative;
+    margin: 50vh 0;
+    text-align: center;
+}
+
+
+
 
 
 
