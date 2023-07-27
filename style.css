@@ -942,6 +942,20 @@ footer{
    .work{
     margin-top: 10rem;
    }
+   .container .work, .container  .w2022{
+    font-size: 12px;
+   }
+   .container .w2022 h5{
+    font-size: 13px;
+   }
+   .container .foto img{
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+   }
+    .container .w2022 .pdf img{
+        width: 300px;
+    }
 
 
 
