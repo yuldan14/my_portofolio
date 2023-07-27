@@ -728,18 +728,30 @@ footer{
 
     .kontak{
         font-size: 14px;
+        background-position: center;
     }
     .left, .middle, .right{
         width: 100px;
     }
     .kontak{
-        background-position: center;
+        
     }
 }
 
 @media (min-width: 426px) and (max-width: 768px){
     header .navbar{
         font-size: 13px;
+    }
+
+    .kontak{
+        font-size: 14px;
+        background-position: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .kontak .left, .kontak .middle, .kontak .right{
+        width: 100px;
     }
     .profil{
         background-position-y: -130px;
@@ -790,6 +802,17 @@ footer{
         font-size: 12px;
         width: 300px;
         box-sizing: border-box;
+    }
+
+    .kontak{
+        font-size: 14px;
+        background-position: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .kontak .left, .kontak .middle, .kontak .right{
+        width: 100px;
     }
     footer{
         padding-top: 500px;
@@ -879,8 +902,16 @@ footer{
         width: 300px;
         box-sizing: border-box;
     }
+
     .kontak{
-        position: relative;
+        font-size: 14px;
+        background-position: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .kontak .left, .kontak .middle, .kontak .right{
+        width: 100px;
     }
     footer{
         padding-top: 500px;
