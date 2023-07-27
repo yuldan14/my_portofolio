@@ -40,8 +40,8 @@ body{
 }
 header{
     display: flex;
-    background-color: rgba(1,1,3,.8);
-    border-bottom: 2px solid var(--primary);
+    background-color: rgba(1,1,3,.5);
+    box-shadow: 0 1px 3px 1px var(--gray);
     position: fixed;
     top: 0;
     width: 100%;
@@ -202,7 +202,9 @@ header .logo{
 
 .interest .header{
     font-size: 30px;
-    padding: 40px 10rem;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
 }
 .card{
     width: 100%;
@@ -315,8 +317,9 @@ header .logo{
     height: 600px;
     display: flex;
     flex-wrap: wrap;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position-x: 1px;
     background-position-y: -120px;
     padding: 10rem 4rem; 
     color: var(--dark);
@@ -423,8 +426,154 @@ footer{
 
 
 
-@media (max-width: 1440px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    color: var(--dark);
+}
+.work{
+    position: relative;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
+
+.container .w2022{
+    box-sizing: border-box;
+    margin-left: 7rem;
+}
+
+.container .w2022 h5{
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+.container .w2022 .pdf{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.container .desc{
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 8rem;
+}
+
+.container .desc p{
+    text-indent: 30px;
+}
+.container .foto{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+.container .foto img{
+    width: 550px;
+    height: 310px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1441px) and (max-width: 2561px){
+
+    html{
+        font-size: 32px;
+    }
+    .hero .container h5, .hero .container h2, .contact a{
+        font-size: 100px;
+    }
+    .skill{
+        font-size: 32px;
+    }
     .kontak{
+        background-size: cover;
+    }
+    .interest .desc{
+        font-size: 22px;
+    }
+    .profil{
+        background-size: cover;
+        height: 100vh;
+        background-position-y: -300px;
+    }
+    .profil .kiri, .profil .kanan{
+        height: 50vh;
+    }
+    .profil .kiri .foto {
+        margin-top: 10rem;
+        width: 600px;
+        height: 800px;
+    }
+    .profil .kanan .deskripsi p{
+        font-size: 40px;
+        width: 50vw;
+        text-align: left;
+        text-indent: 30px;
+        box-sizing: border-box;
+        line-height: 100px;
+        height: 100%;
+    }
+    .kontak{
+        background-position-y: -230px;
+        background-position-x: center;
+        font-size: 32px;
+    }
+
+
+    .container .foto img{
+        width: 1200px;
+        height: 600px;
+    }
+    footer{
+        background-repeat: no-repeat;
+        font-size: 32px;
+        background-size: cover ;
+    }
+
+}
+@media (min-width:1025px) and (max-width: 1440px){
+    html{
+        font-size: 24px;
+    }
+    .hero .container h5, .hero .container h2, .contact a{
+        font-size: 50px;
+    }
+    .kontak{
+        background-size: cover;
+    }
+    .profil{
         background-size: cover;
     }
 }
@@ -442,6 +591,10 @@ footer{
         width: fit-content;
         box-sizing: border-box;
         padding: 0 30px;
+    }
+
+    .kontak{
+        background-position-y: 10px;
     }
 }
 /*Tablet*/
@@ -531,6 +684,20 @@ footer{
     padding: 0px 30px;
     box-sizing: border-box;
    }
+
+
+
+   .container .work, .container  .w2022{
+    font-size: 12px;
+   }
+   .container .w2022 h5{
+    font-size: 13px;
+   }
+   .container .foto img{
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+}
 
 }
 @media (max-width: 375px){
