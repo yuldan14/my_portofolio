@@ -674,7 +674,7 @@ footer{
 
 }
 
-@media (max-width: 1024px){
+@media (min-width: 811px) and (max-width: 1024px){
     .left, .middle, .right{
         width: 150px;
     }
@@ -692,9 +692,22 @@ footer{
     .kontak{
         background-position-y: 10px;
     }
+    .konten .myskill .card{
+        width: 90%;
+     }
+     .konten .myskill .card .desc{
+         margin-right: 0;
+         font-size: 20px;
+         width: 400px;
+     }
+     .konten .myskill .card .more{
+         margin-left: 19rem;
+         font-size: 12px;
+     }
+
 }
 /*Tablet*/
-@media (max-width: 810px){
+@media (min-width: 769px) and (max-width: 810px){
     header{
         width: 100%;
         display: block ;
@@ -724,7 +737,10 @@ footer{
     }
 }
 
-@media (max-width: 768px){
+@media (min-width: 426px) and (max-width: 768px){
+    header .navbar{
+        font-size: 13px;
+    }
     .profil{
         background-position-y: -130px;
     }
@@ -733,10 +749,23 @@ footer{
         width: fit-content;
         padding: 0 30px;
     }
+    .konten .myskill .card{
+        width: 90%;
+     }
+     .konten .myskill .card .desc{
+         margin-right: 0;
+         font-size: 18px;
+         width: 300px;
+     }
+     .konten .myskill .card .more{
+         margin-left: 10rem;
+         font-size: 12px;
+     }
+    
 }
 
 /*Phone*/
-@media (max-width: 425px){
+@media (min-width: 376px) and (max-width: 425px){
     header .navbar{
         font-size: 10px;
     }
@@ -797,9 +826,23 @@ footer{
     .container .w2022 .pdf img{
         width: 300px;
     }
+
+    .konten .myskill .card{
+        width: 90%;
+     }
+     .konten .myskill .card .desc{
+         margin-right: 0;
+         font-size: 15px;
+         width: 100px;
+     }
+     .konten .myskill .card .more{
+         margin-left: 4rem;
+         font-size: 12px;
+     }
+    
 }
 
-@media (max-width: 375px){
+@media (min-width: 321px) and (max-width: 375px){
     header .navbar{
         font-size: 9px;
     }
