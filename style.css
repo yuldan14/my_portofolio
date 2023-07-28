@@ -114,6 +114,11 @@ header .logo{
     transition: .2s linear;
 }
 
+.navbar-extra a{
+    color: white;
+   display: none;
+}
+
 
 
 .hero{
@@ -733,15 +738,50 @@ footer{
     .left, .middle, .right{
         width: 100px;
     }
-    .kontak{
-        
-    }
 }
 
 @media (min-width: 426px) and (max-width: 768px){
     header .navbar{
         font-size: 13px;
+        height: 100vh;
+        width: 300px;
+        position: absolute;
+        right: -300px;
+        top: 3.8rem;
+        background: rgba(1,1,3,.9);
     }
+    header .logo{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .navbar.aktif{
+        right: 0px;
+    }
+    header .navbar ul{
+        display: inline-block;
+        position: absolute;
+        top: 10%;
+    }
+    header .navbar ul li{
+        margin: 2rem 0;
+    }
+    .navbar-extra #menu{
+        display: inline-block;
+    }
+    .navbar.aktif{
+        right: 0;
+    }
+    .navbar-extra{
+        position: absolute;
+        right: 7%;
+        top: 10px;
+        display: block;
+    }
+
+    
 
     .kontak{
         font-size: 14px;
@@ -778,17 +818,45 @@ footer{
     
     /*Phone*/
 @media (min-width: 376px) and (max-width: 425px){
-    header{
-            display: flex;
-            flex-wrap: wrap;
-            padding-bottom: 3rem;
+
+    header .navbar{
+        font-size: 13px;
+        height: 100vh;
+        width: 300px;
+        position: absolute;
+        right: -300px;
+        top: 3.8rem;
+        background: rgba(1,1,3,.9);
     }
     header .logo{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
 
-            width: 100%;
     }
-    header .navbar{
-        font-size: 10px;
+    .navbar.aktif{
+        right: 0px;
+    }
+    header .navbar ul{
+        display: inline-block;
+        position: absolute;
+        top: 10%;
+    }
+    header .navbar ul li{
+        margin: 2rem 0;
+    }
+    .navbar-extra #menu{
+        display: inline-block;
+    }
+    .navbar.aktif{
+        right: 0;
+    }
+    .navbar-extra{
+        position: absolute;
+        right: 7%;
+        top: 10px;
+        display: block;
     }
     .hero{
         background-position-x: -95px;
@@ -875,17 +943,59 @@ footer{
 }
 
 @media (min-width: 321px) and (max-width: 375px){
-    header{
-        display: flex;
-        flex-wrap: wrap;
-        padding-bottom: 3rem;
+    header .navbar{
+        font-size: 13px;
+        height: 100vh;
+        width: 200px;
+        position: absolute;
+        right: -300px;
+        top: 3.8rem;
+        background: rgba(1,1,3,.9);
     }
     header .logo{
         width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
     }
-    header .navbar{
-        font-size: 9px;
+    .navbar.aktif{
+        right: 0px;
     }
+    header .navbar ul{
+        display: inline-block;
+        position: absolute;
+        top: 10%;
+    }
+    header .navbar ul li{
+        margin: 2rem 0;
+    }
+    .navbar-extra #menu{
+        display: inline-block;
+    }
+    .navbar.aktif{
+        right: 0;
+    }
+    .navbar-extra{
+        position: absolute;
+        right: 7%;
+        top: 10px;
+        display: block;
+    }
+    .navbar a::after{
+        transform-origin: 0 0;
+    }
+    .navbar a:hover::after{
+        transform: scaleX(0.15);
+    }
+
+
+
+
+
+
+
+
     .interest .header{
         display: flex;
         justify-content: center;
