@@ -703,6 +703,11 @@ footer .footer-container .center .link .links a:hover {
   footer .footer-container .left {
     padding-left: 10px;
   }
+
+
+  .pointer{
+    display: none;
+  }
   /* .nav-menu ul.active {
     right: 10rem;
     width: 200px;
