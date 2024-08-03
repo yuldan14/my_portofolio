@@ -144,12 +144,12 @@ section#home {
 }
 
 /* Connect */
-#home .home-page .connect{
+#home .home-page .connect {
   width: 25%;
   padding-left: 3rem;
   display: flex;
 }
-#home .home-page .connect .text-connect{
+#home .home-page .connect .text-connect {
   display: flex;
   align-items: center;
   height: 100%;
@@ -168,10 +168,10 @@ h1.vertical-text {
   text-align: center;
 }
 
-#home .home-page .connect .sosmed{
+#home .home-page .connect .sosmed {
   width: 50%;
 }
-#home .home-page .connect .sosmed ul{
+#home .home-page .connect .sosmed ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -183,14 +183,14 @@ h1.vertical-text {
   align-items: center;
 }
 
-#home .home-page .connect .sosmed ul li{
+#home .home-page .connect .sosmed ul li {
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
   padding-left: 0;
 }
-#home .home-page .connect .sosmed ul li a{
+#home .home-page .connect .sosmed ul li a {
   padding: 1rem;
   border-radius: 2rem;
   background-color: var(--white);
@@ -198,22 +198,14 @@ h1.vertical-text {
   color: var(--font);
   font-weight: 700;
 }
-#home .home-page .connect .sosmed ul li a:hover{
+#home .home-page .connect .sosmed ul li a:hover {
   background-color: var(--font);
   color: var(--white);
   transition: 0.3s;
 }
 
-
-
-
-
-
-
-
-
 /* Center */
-#home .home-page .center{
+#home .home-page .center {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -221,9 +213,9 @@ h1.vertical-text {
   justify-content: center;
   width: 50%;
 }
-#home .home-page .get-started{
+#home .home-page .get-started {
   display: flex;
-  justify-content: center;;
+  justify-content: center;
 }
 #home .home-page .get-started a {
   text-decoration: none;
@@ -521,40 +513,25 @@ section#profile .profile-img img {
   color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer */
-footer{
+footer {
   background: linear-gradient(to right, #f093fb, #f5576c);
   width: 100%;
   height: 25rem;
   /* border-top-left-radius: 30%;
   border-top-right-radius: 30%; */
 }
-footer .footer-container{
+footer .footer-container {
   display: flex;
   align-items: center;
   height: 100%;
 }
-footer .footer-container .left{
+footer .footer-container .left {
   height: 100%;
   width: 33%;
   padding-left: 5rem;
-
 }
-footer .footer-container .left img{
+footer .footer-container .left img {
   width: 7rem;
   display: flex;
   justify-content: center;
@@ -562,56 +539,165 @@ footer .footer-container .left img{
   padding-top: 3rem;
 }
 footer .footer-container .left .text-left {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: white;
   text-align: center;
   border-end-end-radius: 1px solid;
   margin-top: 2rem;
 }
-footer .footer-container .left .text-left p{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+footer .footer-container .left .text-left p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-top: 1rem;
 }
-footer .footer-container .left .text-left .sosmed{
+footer .footer-container .left .text-left .sosmed {
   display: flex;
   justify-content: space-evenly;
   margin-top: 2rem;
 }
-footer .footer-container .left .text-left .sosmed a{
+footer .footer-container .left .text-left .sosmed a {
   text-decoration: none;
   color: var(--font);
   font-weight: 700;
   background-color: var(--white);
-  padding: .7rem;
+  padding: 0.7rem;
   border-radius: 50%;
 }
-footer .footer-container .left .text-left .sosmed a:hover{
+footer .footer-container .left .text-left .sosmed a:hover {
   color: var(--white);
   background-color: var(--font);
-  transition: .3s;
+  transition: 0.3s;
 }
 /* center */
-footer .footer-container .center, footer .footer-container .right{
+footer .footer-container .center,
+footer .footer-container .right {
   height: 100%;
   width: 33%;
   padding-top: 5rem;
   display: flex;
   justify-content: center;
 }
-footer .footer-container .center .link .link-head, footer .footer-container .right .contact-head{
+footer .footer-container .center .link .link-head,
+footer .footer-container .right .contact-head {
   margin-bottom: 3rem;
   font-size: larger;
 }
-footer .footer-container .center .link .links{
+footer .footer-container .center .link .links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-footer .footer-container .center .link .links a{
+footer .footer-container .center .link .links a {
   text-decoration: none;
   color: white;
 }
-footer .footer-container .center .link .links a:hover{
+footer .footer-container .center .link .links a:hover {
   color: var(--font);
 }
 
+/* Responsif mobile L */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.burger div {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 425px) {
+  nav .nav-menu ul{
+    font-size: 12px;
+    gap: 1px;
+    z-index: 99;
+    padding: 0;
+  }
+  nav .nav-menu ul li a{
+    font-size: 10px;
+    padding: .5rem;
+  }
+
+
+
+  #home .home-container .home-page .connect{
+    display: none;
+  }
+  #home .home-container .home-page .center{
+    width: 100%;
+  }
+
+
+  /* Profil */
+  section#profile {
+    height: max-content;
+    flex-direction: column-reverse;
+  }
+  section#profile .profile-img.show{
+    transform: translateX(0);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  section#profile .profile-img img{
+    box-shadow: none;
+  }
+  section#profile .profile-desc .desc{
+    width: 100vw;
+  }
+  section#profile .profile-desc .desc .skills h5{
+    font-size: 18px;
+  }
+  section#profile .profile-desc .desc .skills .skill-set .skill{
+    font-size: 10px;
+  }
+
+  #projects .projek-container, .pub-container {
+    justify-content: center;
+  }
+  #projects .projek-container .projek-card img, .pub-card img{
+    width: 13rem;
+  }
+
+  #publication{
+    height: 100%;
+  }
+
+
+  footer{
+    height: max-content;
+  }
+  footer .footer-container .left{
+    padding-left: 10px;
+  }
+  /* .nav-menu ul.active {
+    right: 10rem;
+    width: 200px;
+  } */
+
+  /* .burger {
+    display: flex;
+  }
+
+  .burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger.toggle .line2 {
+    opacity: 0;
+  }
+
+  .burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  } */
+}
