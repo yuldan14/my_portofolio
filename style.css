@@ -678,7 +678,7 @@ footer .footer-container .center .link .links a:hover {
   .pub-container {
     flex-wrap: nowrap;
     gap: 20px; /* Jarak antar kartu */
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     overflow-x: auto; /* Mengaktifkan scroll horizontal */
     scroll-snap-type: x mandatory; /* Efek snapping */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
