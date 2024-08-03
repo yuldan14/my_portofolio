@@ -617,6 +617,9 @@ footer .footer-container .center .link .links a:hover {
 }
 
 @media (max-width: 425px) {
+  nav{
+    padding: 0 1rem;
+  }
   nav .nav-menu ul {
     font-size: 12px;
     gap: 1px;
