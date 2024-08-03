@@ -635,7 +635,9 @@ footer .footer-container .center .link .links a:hover {
   #home .home-container .home-page .center{
     width: 100%;
   }
-
+  #home .home-page .get-started a{
+    font-size: 12px;
+  }
 
   /* Profil */
   section#profile {
@@ -652,14 +654,23 @@ footer .footer-container .center .link .links a:hover {
   section#profile .profile-img img{
     box-shadow: none;
   }
+  section#profile .profile-desc{
+    width: 90%;
+    padding-left: 0;
+    margin: auto;
+  }
   section#profile .profile-desc .desc{
     width: 100vw;
+    padding: 3rem 2rem;
   }
   section#profile .profile-desc .desc .skills h5{
     font-size: 18px;
   }
   section#profile .profile-desc .desc .skills .skill-set .skill{
     font-size: 10px;
+  }
+  section#profile .profile-desc .desc h4{
+    text-align: center;
   }
 
   #projects .projek-container, .pub-container {
@@ -676,6 +687,7 @@ footer .footer-container .center .link .links a:hover {
 
   footer{
     height: max-content;
+    display: none;
   }
   footer .footer-container .left{
     padding-left: 10px;
