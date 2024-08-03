@@ -1,203 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yuldan| Home</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
-      rel="stylesheet"
-    />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuldan | Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <!-- Feather icon -->
     <script src="https://unpkg.com/feather-icons"></script>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <h3>Yul<span>dan.</span></h3>
-      </div>
-      <div class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="profile/index.html">Profile</a></li>
-          <li><a href="skill/index.html">Skills</a></li>
-          <li><a href="karya/index.html">Scientific Work</a></li>
-        </ul>
-      </div>
-      <div class="navbar-extra">
-        <a href="#" id="menu"><i data-feather="menu"></i></a>
-      </div>
-    </header>
-    <div class="hero" id="Home">
-      <div class="container">
-        <div class="desc">
-          <h5>HELLO THERE!</h5>
-          <h2>This is<span> Yuldan's</span> Website Page.</h2>
-          <div class="sosmed">
+
+
+    <!-- Nunito -->
+    <style>
+        @font-face {
+            font-family: NunitoSans;
+            src: url(NunitoSans.ttf);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Ini navbar -->
+    <nav>
+        <div class="nav-logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <div class="nav-menu">
             <ul>
-              <li>
-                <a href="https://www.instagram.com/yuldaan/"
-                  ><i data-feather="instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/yuldan-nur-addinsyah-642b64255"
-                  ><i data-feather="linkedin"></i
-                ></a>
-              </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publication">Publication</a></li>
             </ul>
-          </div>
-          <div class="contact">
-            <a href="#">Contact Me</a>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="skill">
-      <ul>
-        <li><span>01.</span> Excel</li>
-        <li><span>02.</span> Power Point</li>
-        <li><span>03.</span> Website Development</li>
-        <li><span>04.</span> Data Analytics</li>
-      </ul>
-    </div>
-    <div class="interest">
-      <div class="header">
-        <h3>INTEREST</h3>
-      </div>
-      <div class="card">
-        <div class="excel">
-          <div class="foto"></div>
-          <div class="head"><span>01.</span> Excel</div>
-          <div class="desc">
-            <p>
-              I use Excel to sorting and filter my data. I have interest on
-              data. With excel, i can apply data into chart and graph to making
-              decision easier.
-            </p>
-          </div>
-          <div class="port">
-            <a href="#Portfolio">Read More</a>
-          </div>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home">
+        <div class="home-container">
+            <div class="home-page">
+                <div class="connect">
+                    <div class="text-connect">
+                        <h1 class="vertical-text">
+                            <span>C</span>
+                            <span>O</span>
+                            <span>N</span>
+                            <span>N</span>
+                            <span>E</span>
+                            <span>C</span>
+                            <span>T</span>
+                        </h1>
+                    </div>
+                    <div class="sosmed">
+                        <ul>
+                            <li> <a href=""><i data-feather="instagram"></i></a></li>
+                            <li> <a href=""><i data-feather="linkedin"></i></a></li>
+                            <li> <a href=""><i data-feather="mail"></i></a></li>
+                            <li> <a href=""><i data-feather="github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="greet">
+                        <h2 id="typewriter-h2" class="typewriter"></h2>
+                        <h3 id="typewriter-h3" class="typewriter"></h3>
+                    </div>
+                    <div class="get-started">
+                        <a href="#profile">Get Started</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="ppt">
-          <div class="foto"></div>
-          <div class="head"><span>02.</span> Powerpoint</div>
-          <div class="desc">
-            <p>
-              I use powerpoint to present my ideas into beautiful and attractive
-              design. This software is very helpful for me to present my data so
-              that it can be accepted by listener.
-            </p>
-          </div>
-          <div class="port">
-            <a href="#Portfolio">Read More</a>
-          </div>
+    </section>
+
+    <!-- Profil -->
+    <section id="profile">
+        <div class="profile-desc">
+            <div class="desc">
+                <h4>
+                    YULDAN NUR ADDINSYAH
+                </h4>
+                <p>
+                    As a 5th-semester Computer Science student at Siliwangi University, I've gained practical experience
+                    in data processing and predictive analysis. My technical skills include Python programming and
+                    front-end web development. I'm a collaborative team member and have been actively involved in the
+                    Computer Science Student Association.
+                </p>
+                <div class="skills">
+                    <h5>
+                        SKILLS
+                    </h5>
+                    <div class="skill-set">
+                        <div class="skill">
+                            Python
+                        </div>
+                        <div class="skill">
+                            Data Science
+                        </div>
+                        <div class="skill">
+                            Excel
+                        </div>
+                        <div class="skill">
+                            Web Development
+                        </div>
+                        <div class="skill">
+                            Teamwork
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="website">
-          <div class="foto"></div>
-          <div class="head"><span>03.</span> Website Development</div>
-          <div class="desc">
-            <p>
-              As a designer, i also build a website to improve my skill and i
-              also can apply my ideas into article on my website.
-            </p>
-          </div>
-          <div class="port">
-            <a href="#Portfolio">Read More</a>
-          </div>
+        <!-- Profile picture -->
+        <div class="profile-img">
+            <img src="yuldan.jpg" alt="yuldan">
+            <div class="hover-text">
+                <p>YULDAN</p>
+            </div>
         </div>
-        <div class="data">
-          <div class="foto"></div>
-          <div class="head"><span>04.</span> Data Analytics</div>
-          <div class="desc">
-            <p>
-              To improve my data quality, i also have interest to programming
-              and i learn programming languange such a Python. With python, i
-              can clean, transform, and filter my data so that it increase my
-              data quality.
-            </p>
-          </div>
-          <div class="port">
-            <a href="#Portfolio">Read More</a>
-          </div>
+    </section>
+
+
+    <!-- Project -->
+    <section id="projects">
+        <div class="project-head">
+            <h2>
+                PROJECTS
+            </h2>
         </div>
-      </div>
-    </div>
-    <div class="kontak">
-      <div class="left">
-        <div class="logo">
-          <h3>Yul<span>dan.</span></h3>
+        <div class="projek-container">
+            <div class="projek-card">
+                <a href="https://github.com/yuldan14/syafa_water" target="_blank">
+                    <img src="https://img.freepik.com/free-photo/close-up-busy-businesswoman-writing_1098-3428.jpg?t=st=1722568541~exp=1722572141~hmac=af5403ed02bf2c4ab0b17607cfc0cbb1eed58007b2544d172c1c4437b8655b8e&w=740"
+                        alt="syafa">
+                    <div class="hover-text">
+                        <p>CV Syafa Water Web Administration</p>
+                    </div>
+                </a>
+            </div>
+            <div class="projek-card">
+                <a href="https://github.com/yuldan14/klasifikasi_kemiskinan" target="_blank">
+                    <img src="https://img.freepik.com/free-photo/poverty-child-wallpaper_1409-6311.jpg?t=st=1722570598~exp=1722574198~hmac=5bc6c441515e78a424db3337e0821f4b258aa4fd02e074e71acc2597cf59572c&w=740"
+                        alt="Kemiskinan">
+                    <div class="hover-text">
+                        <p>Poverty Level Classification Analysis in Indonesia <span class="ribbon">New</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="projek-card">
+                <a href="https://jurnal.itscience.org/index.php/dsi/article/view/1888/1408" target="_blank">
+                    <img src="https://img.freepik.com/premium-photo/brown-tag-with-word-calla-it_967785-146598.jpg?w=740"
+                        alt="Learn-gold">
+                    <div class="hover-text">
+                        <p>LearnGold: Gold Price Prediction Website</p>
+                    </div>
+                </a>
+            </div>
+            <div class="projek-card">
+                <a href="https://github.com/me50/yuldan14" target="_blank">
+                    <img src="https://img.freepik.com/free-photo/ai-site-helping-with-software-production_1268-21620.jpg?t=st=1722576813~exp=1722580413~hmac=f053477919375e67fe1ac7b066cdf7fe3aba5513991a40f28e91bd2f3734eaa1&w=900"
+                        alt="Learn-gold">
+                    <div class="hover-text">
+                        <p>CS50: Python Project</p>
+                    </div>
+                </a>
+            </div>
+            <div class="projek-card">
+                <a href="https://github.com/me50/yuldan14" target="_blank">
+                    <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241199.jpg?t=st=1722582820~exp=1722586420~hmac=99818f9d5fc5e33453997dde8b178367ed46fe3f246f51712f03742eb661ddf9&w=740"
+                        alt="Learn-gold">
+                    <div class="hover-text">
+                        <p>HarvardX : Introduction to Data Science with Python</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="desc">
-          <p>
-            Independent informatics student who has interest on data analytics
-            and Web Development.
-          </p>
-          <p>Siliwangi Univesity</p>
+    </section>
+
+
+
+    <!-- Publikasi -->
+    <section id="publication">
+        <div class="publikasi-head">
+            <h2>
+                PUBLICATIONS
+            </h2>
         </div>
-      </div>
-      <div class="middle">
-        <div class="logo">
-          <h3>Links</h3>
+
+        <!-- Bagian Publikasi card -->
+        <div class="pub-container">
+            <div class="pub-card">
+                <a href="https://e-journal.usd.ac.id/index.php/IJASST/article/view/7798" target="_blank">
+                    <img src="https://img.freepik.com/free-photo/documents-paperwork-business-strategy-concept_53876-120383.jpg?t=st=1722586233~exp=1722589833~hmac=2c1bf43d7d8df855c8219e93fbb5c15b49d8ced78eb820d3a1eb0bcbd54e4ba5&w=740"
+                        alt="">
+                    <div class="hover-text">
+                        <p>Clustering and Trend Analysis of Priority Commodities in the Archipelago Capital Region (IKN)
+                            using a Data Mining Approach</p>
+                    </div>
+                </a>
+            </div>
+            <div class="pub-card">
+                <a href="https://jurnal.itscience.org/index.php/dsi/article/view/1888" target="_blank">
+                    <img src="https://img.freepik.com/free-photo/aerial-view-woman-using-retro-typewriter_53876-30604.jpg?t=st=1722586555~exp=1722590155~hmac=e6719de1c3404af555bf7c2693ff5cff568284c9d43ae1f8886c5621119e95a2&w=360"
+                        alt="">
+                    <div class="hover-text">
+                        <p>Intelligent Website-Based Gold Price Prediction Application with Implementation of Smoothing
+                            Time Series Forecasting Algorithm</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="list">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile/index.html">Profile</a></li>
-            <li><a href="skill/index.html">Skills</a></li>
-            <li><a href="karya/index.html">Scientific Work</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="right">
-        <div class="logo">
-          <h3>Contact Me</h3>
-        </div>
-        <div class="sosmed">
-          <ul>
-            <li>
-              <a href="https://www.instagram.com/yuldaan/"
-                ><i data-feather="instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/yuldan-nur-addinsyah-642b64255"
-                ><i data-feather="linkedin"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="desc">
-          <ul>
-            <li>0857 0179 6316</li>
-            <li>yuldann6@gmail.com</li>
-            <li>
-              Jalan H Mansyur RT07/03, Desa Cibeunying, Kecamatan Majenang,
-              Cilacap, Jawa Tengah
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    </section>
+
+
+
+    <!-- Footer -->
     <footer>
-      <div class="cr">
-        <p>Created by <span>Yuldan Nur Addinsyah</span>| &copy 2023</p>
-      </div>
+        <div class="footer-container">
+            <div class="left">
+                <img src="logo.png" alt="">
+                <div class="text-left">
+                    <h6>Yuldan Nur Addinsyah</h6>
+                    <p>Computer Science Student at Siliwangi University.</p>
+                    <div class="sosmed">
+                        <a href=""><i data-feather="instagram"></i></a>
+                        <a href=""><i data-feather="linkedin"></i></a>
+                        <a href=""><i data-feather="mail"></i></a>
+                        <a href=""><i data-feather="github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="link">
+                    <div class="link-head">
+                        LINK
+                    </div>
+                    <div class="links">
+                        <a href="#home">Home</a>
+                        <a href="#profile">Profile</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#publication">Publication</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="contact">
+                    <div class="contact-head">
+                        CONTACT US
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+
+
+
+
+
+
+    <div class="pointer"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JS -->
     <script src="script.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- Icon -->
     <script>
-      feather.replace();
+        feather.replace();
     </script>
-  </body>
+
+
+    <!-- Typewriter -->
+    <script>
+        // Teks yang akan ditampilkan
+        const h2Text = "Hallo!";
+        const h3Text = "Welcome to Yuldan's Website.";
+
+        // Ambil elemen h2 dan h3
+        const h2Element = document.getElementById('typewriter-h2');
+        const h3Element = document.getElementById('typewriter-h3');
+
+        // Fungsi untuk menampilkan teks secara bertahap
+        function typeWriter(element, text, delay, callback) {
+            let charIndex = 0;
+            const interval = setInterval(() => {
+                if (charIndex <= text.length) {
+                    element.textContent = text.substring(0, charIndex);
+                    charIndex++;
+                } else {
+                    clearInterval(interval);
+                    if (callback) callback();
+                }
+            }, delay);
+        }
+
+        // Panggil fungsi typeWriter untuk masing-masing elemen
+        typeWriter(h2Element, h2Text, 150, () => {
+            h2Element.style.borderRight = 'none'; // Hentikan animasi kedip-kedip untuk h2
+            typeWriter(h3Element, h3Text, 150, () => {
+                h3Element.style.borderRight = 'none'; // Hentikan animasi kedip-kedip untuk h3
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+</body>
+
 </html>
