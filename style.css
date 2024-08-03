@@ -265,11 +265,10 @@ h1.vertical-text {
 }
 
 /* Profil */
-section#profile {
-  height: 100vh;
+section#profile .profile-container {
+  height: 100%;
   width: 100vw;
   display: flex;
-  margin-top: 4.4rem;
 }
 section#profile .profile-desc {
   width: 60%;
@@ -411,12 +410,14 @@ section#profile .profile-img img {
 }
 
 #projects .project-head,
-#publication .publikasi-head {
+#publication .publikasi-head,
+#profile .profile-head {
   display: flex;
   justify-content: center;
 }
 #projects .project-head h2,
-#publication .publikasi-head h2 {
+#publication .publikasi-head h2,
+#profile .profile-head h2 {
   margin-top: 4rem;
   background: linear-gradient(to right, #f093fb, #f5576c);
   background-clip: text;
@@ -616,80 +617,87 @@ footer .footer-container .center .link .links a:hover {
 }
 
 @media (max-width: 425px) {
-  nav .nav-menu ul{
+  nav .nav-menu ul {
     font-size: 12px;
     gap: 1px;
     z-index: 99;
     padding: 0;
   }
-  nav .nav-menu ul li a{
+  nav .nav-menu ul li a {
     font-size: 10px;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
-
-
-  #home .home-container .home-page .connect{
+  #home .home-container .home-page .connect {
     display: none;
   }
-  #home .home-container .home-page .center{
+  #home .home-container .home-page .center {
     width: 100%;
   }
-  #home .home-page .get-started a{
+  #home .home-page .get-started a {
     font-size: 12px;
   }
 
   /* Profil */
-  section#profile {
+  section#profile .profile-container {
     height: max-content;
     flex-direction: column-reverse;
   }
-  section#profile .profile-img.show{
+  section#profile .profile-img.show {
     transform: translateX(0);
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
   }
-  section#profile .profile-img img{
+  section#profile .profile-img img {
     box-shadow: none;
   }
-  section#profile .profile-desc{
+  section#profile .profile-desc {
     width: 90%;
     padding-left: 0;
     margin: auto;
   }
-  section#profile .profile-desc .desc{
+  section#profile .profile-desc .desc {
     width: 100vw;
     padding: 3rem 2rem;
   }
-  section#profile .profile-desc .desc .skills h5{
+  section#profile .profile-desc .desc .skills h5 {
     font-size: 18px;
   }
-  section#profile .profile-desc .desc .skills .skill-set .skill{
+  section#profile .profile-desc .desc .skills .skill-set .skill {
     font-size: 10px;
   }
-  section#profile .profile-desc .desc h4{
+  section#profile .profile-desc .desc h4 {
     text-align: center;
   }
-
-  #projects .projek-container, .pub-container {
-    justify-content: center;
+  #projects .projek-container,
+  .pub-container {
+    flex-wrap: nowrap;
+    gap: 20px; /* Jarak antar kartu */
+    padding: 0 2rem;
+    overflow-x: auto; /* Mengaktifkan scroll horizontal */
+    scroll-snap-type: x mandatory; /* Efek snapping */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
   }
-  #projects .projek-container .projek-card img, .pub-card img{
-    width: 13rem;
+  .pub-container{
+    padding-left: 10rem;
+  }
+  #projects .projek-container .projek-card img,
+  .pub-card img {
+    width: 15rem;
   }
 
-  #publication{
+  #publication {
     height: 100%;
   }
 
-
-  footer{
+  footer {
     height: max-content;
     display: none;
   }
-  footer .footer-container .left{
+  footer .footer-container .left {
     padding-left: 10px;
   }
   /* .nav-menu ul.active {
