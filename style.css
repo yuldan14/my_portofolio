@@ -640,6 +640,13 @@ footer .footer-container .center .link .links a:hover {
 }
 
 @media (max-width: 425px) {
+  html, body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   nav{
     padding: 0 1rem;
   }
@@ -739,9 +746,7 @@ footer .footer-container .center .link .links a:hover {
   #projects .projek-container .projek-card img, .pub-card img{
     width: 16rem;
   }
-  #projects .projek-container .projek-card, .pub-container .pub-card{
-    width: 16rem;
-  }
+  
   #projects .projek-container,
   .pub-container {
     flex-wrap: nowrap;
