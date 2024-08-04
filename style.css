@@ -698,10 +698,23 @@ footer .footer-container .center .link .links a:hover {
 
   footer {
     height: max-content;
-    display: none;
   }
   footer .footer-container .left {
     padding-left: 10px;
+    font-size: 12px;
+  }
+  footer .footer-container .center, footer .footer-container .right{
+    font-size: 12px;
+  }
+  footer .footer-container{
+    height: 70vh;
+  }
+  footer .footer-container .center .link .link-head, footer .footer-container .right .contact-head{
+    margin-bottom: 5.4rem;
+  }
+  footer .footer-container .left .text-left .sosmed{
+    position: absolute;
+    width: 100vw;
   }
 
 
