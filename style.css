@@ -631,8 +631,25 @@ footer .footer-container .center .link .links a:hover {
     padding: 0.5rem;
   }
 
-  #home .home-container .home-page .connect {
+  #home .home-page .connect .text-connect{
     display: none;
+  }
+  #home .home-page .connect{
+    padding-left: 0;
+    width: 0;
+  }
+  #home .home-page .connect .sosmed{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 25rem;
+    width: 100%;
+  }
+  #home .home-page .connect .sosmed ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
   }
   #home .home-container .home-page .center {
     width: 100%;
