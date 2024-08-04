@@ -796,3 +796,63 @@ footer .footer-container .center .link .links a:hover {
     transform: rotate(45deg) translate(-5px, -6px);
   } */
 }
+
+
+/* Tablet */
+@media (max-width: 768px){
+  nav .nav-menu ul{
+    font-size: 12px;
+    padding-left: 0;
+  }
+  nav .nav-logo{
+    width: max-content;
+  }
+  section#home{
+    width: 95%;
+  }
+  #home .home-page .connect{
+    padding-left: 2rem;
+  }
+  #home .home-page .connect .text-connect{
+    width: 29%;
+  }
+
+  section#profile .profile-img img{
+    width: 12rem;
+  }
+  section#profile .profile-desc .desc{
+    width: 100%;
+  }
+  section#profile .profile-desc{
+    padding-left: 2rem;
+  }
+  section#profile .profile-img{
+    width: 35%;
+  }
+  #projects .projek-container, .pub-container{
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+  #projects .projek-container .projek-card, .pub-container .pub-card{
+    width: 13rem;
+    height: 12rem;
+  }
+
+  .pub-container .pub-card img{
+    width: 100%;
+    height: 100%;
+  }
+  #blog .blog-container{
+    font-size: 2rem;
+  }
+  footer .footer-container .left .text-left .sosmed a{
+    padding: .5rem;
+  }
+  footer .footer-container .left .text-left .sosmed{
+    width:100vw;
+    margin-top: 3.4rem;
+  }
+  footer .footer-container .left{
+    padding-left: 0;
+  }
+}
