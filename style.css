@@ -715,6 +715,7 @@ footer .footer-container .center .link .links a:hover {
 
   footer {
     height: max-content;
+    margin-top: 3rem;
   }
   footer .footer-container .left {
     padding-left: 10px;
