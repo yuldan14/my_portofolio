@@ -648,11 +648,30 @@ footer .footer-container .center .link .links a:hover {
     gap: 1px;
     z-index: 99;
     padding: 0;
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 23em;
+    top: -100rem;
+    transition: .3s;
+    right: 0;
+    padding-top: 3rem;
+    background-color: var(--white);
+    padding-left: 3rem;
   }
+  nav .nav-menu ul li{
+    margin-bottom: 2rem;
+  }
+
   nav .nav-menu ul li a {
     font-size: 10px;
     padding: 0.5rem;
   }
+  .nav-menu ul.active {
+    right: 0;
+    top: 6rem;
+    transition: .3s;
+  } 
 
   #home .home-page .connect .text-connect{
     display: none;
@@ -792,12 +811,9 @@ footer .footer-container .center .link .links a:hover {
   .pointer{
     display: none;
   }
-  /* .nav-menu ul.active {
-    right: 10rem;
-    width: 200px;
-  } */
+  
 
-  /* .burger {
+  .burger {
     display: flex;
   }
 
@@ -811,7 +827,7 @@ footer .footer-container .center .link .links a:hover {
 
   .burger.toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-  } */
+  }
 }
 
 
