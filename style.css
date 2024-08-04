@@ -808,7 +808,7 @@ footer .footer-container .center .link .links a:hover {
     width: max-content;
   }
   section#home{
-    width: 95%;
+    width: 100%;
   }
   #home .home-page .connect{
     padding-left: 2rem;
@@ -830,12 +830,12 @@ footer .footer-container .center .link .links a:hover {
     width: 35%;
   }
   #projects .projek-container, .pub-container{
-    padding: 0 2rem;
-    gap: 1rem;
+    padding: 0 6rem;
+    justify-content: space-between;
   }
   #projects .projek-container .projek-card, .pub-container .pub-card{
     width: 13rem;
-    height: 12rem;
+    height: 20rem;
   }
 
   .pub-container .pub-card img{
