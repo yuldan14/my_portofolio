@@ -666,13 +666,16 @@ footer .footer-container .center .link .links a:hover {
     display: flex;
     justify-content: center;
     bottom: 0;
-    width: 100%;
+    width: 85%;
   }
   #home .home-page .connect .sosmed ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+  }
+  #home .home-page .connect .sosmed ul li a{
+    padding: .7rem;
   }
   #home .home-container .home-page .center {
     width: 100%;
@@ -714,6 +717,12 @@ footer .footer-container .center .link .links a:hover {
   section#profile .profile-desc .desc h4 {
     text-align: center;
   }
+  #projects .projek-container .projek-card img, .pub-card img{
+    width: 16rem;
+  }
+  #projects .projek-container .projek-card, .pub-container .pub-card{
+    width: 16rem;
+  }
   #projects .projek-container,
   .pub-container {
     flex-wrap: nowrap;
@@ -731,7 +740,15 @@ footer .footer-container .center .link .links a:hover {
   .pub-card img {
     width: 15rem;
   }
-
+  #projects .projek-container, .pub-container{
+    gap: 60px;
+  }
+  .pub-container .pub-card img{
+    width: 16rem;
+  }
+  .pub-container{
+    width: 43rem;
+  }
   #publication {
     height: 100%;
   }
@@ -798,8 +815,22 @@ footer .footer-container .center .link .links a:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Tablet */
-/* @media (max-width: 768px){
+@media (min-width: 426px) and (max-width: 768px) {
   nav .nav-menu ul{
     font-size: 12px;
     padding-left: 0;
@@ -856,4 +887,3 @@ footer .footer-container .center .link .links a:hover {
     padding-left: 0;
   }
 }
- */
