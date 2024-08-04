@@ -406,18 +406,20 @@ section#profile .profile-img img {
   padding: 3rem 0;
 }
 #publication {
-  height: 100vh;
+  height: max-content;
 }
 
 #projects .project-head,
 #publication .publikasi-head,
-#profile .profile-head {
+#profile .profile-head,
+#blog .blog-head {
   display: flex;
   justify-content: center;
 }
 #projects .project-head h2,
 #publication .publikasi-head h2,
-#profile .profile-head h2 {
+#profile .profile-head h2,
+#blog .blog-head h2 {
   margin-top: 4rem;
   background: linear-gradient(to right, #f093fb, #f5576c);
   background-clip: text;
@@ -514,6 +516,26 @@ section#profile .profile-img img {
   color: white;
 }
 
+
+
+
+
+
+
+
+/* bLOG */
+#blog .blog-container{
+  height: 20vh;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
 /* Footer */
 footer {
   background: linear-gradient(to right, #f093fb, #f5576c);
@@ -521,6 +543,7 @@ footer {
   height: 25rem;
   /* border-top-left-radius: 30%;
   border-top-right-radius: 30%; */
+  margin-top: 5rem;
 }
 footer .footer-container {
   display: flex;
@@ -712,6 +735,19 @@ footer .footer-container .center .link .links a:hover {
   #publication {
     height: 100%;
   }
+
+
+
+
+
+  #blog .blog-container{
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+
+
+
 
   footer {
     height: max-content;
