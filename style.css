@@ -642,7 +642,7 @@ footer .footer-container .center .link .links a:hover {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 25rem;
+    bottom: 0;
     width: 100%;
   }
   #home .home-page .connect .sosmed ul{
