@@ -666,7 +666,7 @@ footer .footer-container .center .link .links a:hover {
     display: flex;
     justify-content: center;
     bottom: 0;
-    width: 85%;
+    width: 100%;
   }
   #home .home-page .connect .sosmed ul{
     display: flex;
