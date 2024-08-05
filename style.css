@@ -782,9 +782,6 @@ footer .footer-container .center .link .links a:hover {
   #projects .projek-container, .pub-container{
     gap: 60px;
   }
-  .pub-container .pub-card img{
-    width: 16rem;
-  }
   .pub-container{
     margin-left: 2rem;
   }
