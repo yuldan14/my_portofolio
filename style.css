@@ -783,7 +783,7 @@ footer .footer-container .center .link .links a:hover {
     gap: 60px;
   }
   .pub-container{
-    margin-left: 2rem;
+    padding-left: 15rem;
   }
   #publication {
     height: 100%;
@@ -796,11 +796,9 @@ footer .footer-container .center .link .links a:hover {
   #blog .blog-container{
     font-size: 18px;
     margin-top: 0;
+    padding: 0;
   }
-  #blog p{
-    font-size: .8rem;
-    width: 100%;
-  }
+  
 
 
 
