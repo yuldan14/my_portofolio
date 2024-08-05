@@ -884,8 +884,11 @@ footer .footer-container .center .link .links a:hover {
     width: 35%;
   }
   #projects .projek-container, .pub-container{
-    padding: 0 6rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
+  }
+  #projects .projek-container, .pub-container{
+    padding: 0;
+    gap: 6rem 0;
   }
   #projects .projek-container .projek-card, .pub-container .pub-card{
     width: 13rem;
