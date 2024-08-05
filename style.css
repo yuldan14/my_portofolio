@@ -13,6 +13,13 @@ body {
   overflow-x: hidden;
   font-family: NunitoSans;
 }
+.desc p span{
+  background: linear-gradient(to right, #f093fb, #f5576c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 .pointer {
   position: fixed; /* Change to fixed positioning */
@@ -426,7 +433,7 @@ section#profile .profile-img img {
   -webkit-text-fill-color: transparent;
 }
 #projects .projek-container,
-.pub-container {
+.pub-container, .blog-container {
   display: flex;
   justify-content: start;
   margin-top: 3rem;
@@ -438,7 +445,7 @@ section#profile .profile-img img {
   justify-content: center;
 }
 #projects .projek-container .projek-card,
-.pub-container .pub-card {
+.pub-container .pub-card, .blog-container .blog-card {
   width: 15rem;
   height: 20rem;
   background-color: var(--white);
@@ -448,7 +455,7 @@ section#profile .profile-img img {
 }
 
 #projects .projek-container .projek-card img,
-.pub-container .pub-card img {
+.pub-container .pub-card img, .blog-container .blog-card img {
   width: 15rem;
   height: 20rem;
   aspect-ratio: 1/1;
@@ -457,7 +464,7 @@ section#profile .profile-img img {
 }
 
 #projects .projek-container .projek-card img,
-.pub-card img {
+.pub-card img, .blog-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -466,7 +473,7 @@ section#profile .profile-img img {
 }
 
 #projects .projek-container .projek-card .hover-text,
-.pub-card .hover-text {
+.pub-card .hover-text, .blog-card .hover-text{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -480,25 +487,25 @@ section#profile .profile-img img {
   pointer-events: none; /* Prevent the text from interfering with hover */
   z-index: 1; /* Place the text on top of the image */
 }
-.pub-card .hover-text {
+.pub-card .hover-text, .blog-card .hover-text {
   font-size: 1rem;
   text-align: center;
 }
 #projects .projek-container .projek-card .hover-text a,
-.pub-card .hover-text a {
+.pub-card .hover-text a, .blog-card .hover-text a{
   color: white;
   text-decoration: none;
 }
 
 #projects .projek-container .projek-card:hover .hover-text,
-.pub-card:hover .hover-text {
+.pub-card:hover .hover-text, .blog-card:hover .hover-text {
   opacity: 1; /* Show the text on hover */
   z-index: 1;
 }
 
 /* Apply the brightness filter to the background image only */
 #projects .projek-container .projek-card:hover img,
-.pub-card:hover img {
+.pub-card:hover img, .blog-card:hover img{
   filter: brightness(0.7); /* Make the image slightly darker */
 }
 .ribbon {
@@ -529,6 +536,9 @@ section#profile .profile-img img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#blog P{
+  font-size: 1rem;
 }
 
 
@@ -608,8 +618,12 @@ footer .footer-container .center .link .links, .right .contact .links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  cursor: default;
 }
-footer .footer-container .center .link .links a, .contact .links a {
+.right .contact .links p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+footer .footer-container .center .link .links a, .contact .links a, .links p {
   text-decoration: none;
   color: white;
 }
@@ -785,6 +799,10 @@ footer .footer-container .center .link .links a:hover {
   #blog .blog-container{
     font-size: 18px;
     margin-top: 0;
+  }
+  #blog p{
+    font-size: .8rem;
+    width: 100%;
   }
 
 
