@@ -783,7 +783,7 @@ footer .footer-container .center .link .links a:hover {
     gap: 60px;
   }
   .pub-container{
-    padding-left: 15rem;
+    padding-left: 13rem;
   }
   #publication {
     height: 100%;
@@ -849,7 +849,18 @@ footer .footer-container .center .link .links a:hover {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
-
+#projects .projek-container .projek-card .hover-text,
+.pub-card .hover-text, .blog-card .hover-text{
+  opacity: 1;
+}
+#projects .projek-container .projek-card img,
+.pub-card img, .blog-card img{
+  filter: brightness(0.5); /* Make the image slightly darker */
+}
+#projects .projek-container .projek-card:hover img,
+.pub-card:hover img, .blog-card:hover img{
+  filter: brightness(0.5); /* Make the image slightly darker */
+}
 
 
 
