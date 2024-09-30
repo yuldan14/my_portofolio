@@ -662,12 +662,11 @@ footer .footer-container .center .link .links a:hover {
 
 /* Phone L */
 @media (max-width: 425px) {
-  html, body{
-    overflow-x: hidden;
-  }
   nav{
     padding: 0 1rem;
     position: sticky;
+    top: 0;
+    z-index: 999999;
   }
   nav .nav-menu ul {
     font-size: 12px;
@@ -675,7 +674,7 @@ footer .footer-container .center .link .links a:hover {
     z-index: 99;
     padding: 0;
     display: block;
-    position: absolute;
+    position: fixed;
     width: 200px;
     height: 45em;
     top: 4rem;
