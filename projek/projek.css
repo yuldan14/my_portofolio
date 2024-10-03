@@ -6,6 +6,16 @@
   padding-left: 2rem;
   font-size: 12px;
   background: #ddd8d8;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.path .back a{
+  margin-left: -1rem;
+  margin-right: 2rem;
+  text-decoration: none;
+  color: var(--font);
 }
 .projek-kontainer .head-img img {
   width: 15rem;
