@@ -81,3 +81,9 @@
   scroll-snap-align: start; /* Setiap kartu snap pada awal ketika di-scroll */
 }
 
+ol li{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 0 2rem;
+  text-align: justify;
+}
+
