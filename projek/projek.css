@@ -1,0 +1,83 @@
+:root {
+  --font: rgb(61, 60, 60);
+  --white: #e6e6e6;
+}
+.path {
+  padding-left: 2rem;
+  font-size: 12px;
+  background: #ddd8d8;
+}
+.projek-kontainer .head-img img {
+  width: 15rem;
+  height: 20rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.projek-kontainer .head-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.head-projek {
+  margin-top: 3rem;
+}
+.head-projek h4 {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #f093fb, #f5576c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projek-deskripsi p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: justify;
+  padding: 0 2rem;
+  text-indent: 30px;
+}
+.projek-deskripsi p a {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+  background: linear-gradient(to right, #f093fb, #f5576c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Galeri */
+.galeri h2 {
+  background: linear-gradient(to right, #f093fb, #f5576c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  justify-content: center;
+  display: flex;
+  margin-top: 2rem;
+}
+.galeri .galeri-container {
+  display: flex;
+  width: 80%;
+  margin-left: 3rem;
+  overflow-x: auto; /* Mengaktifkan scroll horizontal */
+  flex-wrap: nowrap; /* Jangan dibungkus, supaya bisa scroll horizontal */
+  gap: 50px; /* Jarak antar kartu */
+  padding: 1rem 2rem;
+  scroll-snap-type: x mandatory; /* Efek snapping */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.galeri-container::-webkit-scrollbar {
+  display: none; /* Sembunyikan scrollbar di Webkit browser (Chrome, Safari) */
+}
+
+.galeri-card {
+  flex: 0 0 auto; /* Mencegah kartu menyusut agar tetap dalam ukuran aslinya */
+  scroll-snap-align: start; /* Setiap kartu snap pada awal ketika di-scroll */
+}
+
