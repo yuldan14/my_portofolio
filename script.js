@@ -93,5 +93,17 @@ document.addEventListener('click', (event) => {
         burger.classList.remove('toggle');
     }
 });
+let currentIndex = 0;
+const cards = document.querySelectorAll('.galeri-card');
+const totalCards = cards.length;
 
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % totalCards; // Loop kembali ke gambar pertama jika sudah sampai akhir
+    const offset = -currentIndex * 300; // 300px adalah lebar tiap gambar
+    cards.forEach(card => {
+        card.style.transform = `translateX(${offset}px)`;
+    });
+}
+
+setInterval(showNextImage, 1500); // Pindah gambar setiap 4 detik
 
