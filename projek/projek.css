@@ -5,7 +5,6 @@
 .path {
   padding-left: 2rem;
   font-size: 12px;
-  background: #ddd8d8;
   height: 2rem;
   display: flex;
   align-items: center;
@@ -66,30 +65,32 @@
   justify-content: center;
   display: flex;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-.galeri .galeri-container {
+.galeri{
   display: flex;
-  width: 80%;
-  margin-left: 3rem;
-  overflow-x: auto; /* Mengaktifkan scroll horizontal */
-  flex-wrap: nowrap; /* Jangan dibungkus, supaya bisa scroll horizontal */
-  gap: 50px; /* Jarak antar kartu */
-  padding: 1rem 2rem;
-  scroll-snap-type: x mandatory; /* Efek snapping */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-  justify-content: space-evenly;
-  margin-top: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.galeri-container::-webkit-scrollbar {
-  display: none; /* Sembunyikan scrollbar di Webkit browser (Chrome, Safari) */
+.galeri-container {
+  display: flex;
+  overflow: hidden;
+  width: 300px; /* Sesuaikan dengan lebar gambar */
+  height: 200px; /* Sesuaikan dengan tinggi gambar */
+  position: relative;
 }
 
 .galeri-card {
-  flex: 0 0 auto; /* Mencegah kartu menyusut agar tetap dalam ukuran aslinya */
-  scroll-snap-align: start; /* Setiap kartu snap pada awal ketika di-scroll */
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
+
+.galeri-container img {
+  width: 100%;
+  height: auto;
+}
+
 
 ol li{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
