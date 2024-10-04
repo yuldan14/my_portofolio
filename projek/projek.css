@@ -79,6 +79,7 @@
   width: 300px; /* Sesuaikan dengan lebar gambar */
   height: 200px; /* Sesuaikan dengan tinggi gambar */
   position: relative;
+  border-radius:30px
 }
 
 .galeri-card {
