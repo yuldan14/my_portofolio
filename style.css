@@ -661,7 +661,10 @@ footer .footer-container .center .link .links a:hover {
 
 
 /* Phone L */
-@media (max-width: 425px) {
+@media (max-width: 500px) {
+  body{
+    overflow-x: hidden;
+  }
   nav{
     padding: 0 1rem;
     position: sticky;
@@ -821,7 +824,8 @@ footer .footer-container .center .link .links a:hover {
   footer {
     height: max-content;
     margin-top: 3rem;
-    width: 102.5%;
+    width: 100%;
+    overflow-x: hidden;
   }
   footer .footer-container .left {
     padding-left: 10px;
@@ -838,7 +842,7 @@ footer .footer-container .center .link .links a:hover {
   }
   footer .footer-container .left .text-left .sosmed{
     position: absolute;
-    width: 100vw;
+    width: 97%;
   }
 
 
