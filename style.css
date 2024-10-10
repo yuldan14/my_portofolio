@@ -287,7 +287,7 @@ section#profile .profile-desc {
 }
 section#profile .profile-desc .desc {
   background-color: var(--white);
-  width: 60%;
+  width: 100%;
   height: max-content;
   border-radius: 3rem;
   padding: 3rem 3rem;
@@ -406,34 +406,23 @@ section#profile .profile-img img {
 }
 
 /* Projects */
-#projects,
-#publication {
+#projects{
   width: 100%;
   padding: 3rem 0;
 }
-#publication {
-  height: max-content;
-}
 
-#projects .project-head,
-#publication .publikasi-head,
-#profile .profile-head,
-#blog .blog-head {
+#projects .project-head, #profile .profile-head{
   display: flex;
   justify-content: center;
 }
-#projects .project-head h2,
-#publication .publikasi-head h2,
-#profile .profile-head h2,
-#blog .blog-head h2 {
+#projects .project-head h2, #profile .profile-head h2{
   margin-top: 4rem;
   background: linear-gradient(to right, #f093fb, #f5576c);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#projects .projek-container,
-.pub-container, .blog-container {
+#projects .projek-container{
   display: flex;
   justify-content: space-evenly;
   margin-top: 3rem;
@@ -441,11 +430,8 @@ section#profile .profile-img img {
   padding: 0 10rem;
   gap: 6rem 9rem;
 }
-.pub-container {
-  justify-content: center;
-}
-#projects .projek-container .projek-card,
-.pub-container .pub-card, .blog-container .blog-card {
+
+#projects .projek-container .projek-card{
   width: 15rem;
   height: 20rem;
   background-color: var(--white);
@@ -454,8 +440,7 @@ section#profile .profile-img img {
   transition: filter 0.3s ease; /* Add a smooth transition for the filter */
 }
 
-#projects .projek-container .projek-card img,
-.pub-container .pub-card img, .blog-container .blog-card img {
+#projects .projek-container .projek-card img{
   width: 15rem;
   height: 20rem;
   aspect-ratio: 1/1;
@@ -463,8 +448,7 @@ section#profile .profile-img img {
   border-radius: 0.5rem;
 }
 
-#projects .projek-container .projek-card img,
-.pub-card img, .blog-card img {
+#projects .projek-container .projek-card img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -472,8 +456,7 @@ section#profile .profile-img img {
   transition: filter 0.3s ease; /* Add a smooth transition for the filter */
 }
 
-#projects .projek-container .projek-card .hover-text,
-.pub-card .hover-text, .blog-card .hover-text{
+#projects .projek-container .projek-card .hover-text{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -487,25 +470,19 @@ section#profile .profile-img img {
   pointer-events: none; /* Prevent the text from interfering with hover */
   z-index: 1; /* Place the text on top of the image */
 }
-.pub-card .hover-text, .blog-card .hover-text {
-  font-size: 1rem;
-  text-align: center;
-}
-#projects .projek-container .projek-card .hover-text a,
-.pub-card .hover-text a, .blog-card .hover-text a{
+
+#projects .projek-container .projek-card .hover-text a{
   color: white;
   text-decoration: none;
 }
 
-#projects .projek-container .projek-card:hover .hover-text,
-.pub-card:hover .hover-text, .blog-card:hover .hover-text {
+#projects .projek-container .projek-card:hover .hover-text{
   opacity: 1; /* Show the text on hover */
   z-index: 1;
 }
 
 /* Apply the brightness filter to the background image only */
-#projects .projek-container .projek-card:hover img,
-.pub-card:hover img, .blog-card:hover img{
+#projects .projek-container .projek-card:hover img{
   filter: brightness(0.7); /* Make the image slightly darker */
 }
 .ribbon {
@@ -529,18 +506,7 @@ section#profile .profile-img img {
 
 
 
-/* bLOG */
-#blog .blog-container{
-  height: 20vh;
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: max-content;
-}
-#blog p{
-  font-size: 1rem;
-}
+
 
 
 
@@ -652,7 +618,18 @@ footer .footer-container .center .link .links a:hover {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-
+#projects .projek-container .projek-card .hover-text{
+  opacity: 1;
+}
+#projects .projek-container .projek-card img{
+  filter: brightness(0.5); /* Make the image slightly darker */
+}
+#projects .projek-container .projek-card:hover img{
+  filter: brightness(0.5); /* Make the image slightly darker */
+}
+#projects .projek-card .hover-text p.pub{
+  font-size: 1.05rem;
+}
 
 
 
@@ -661,7 +638,7 @@ footer .footer-container .center .link .links a:hover {
 
 
 /* Phone L */
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   body{
     overflow-x: hidden;
   }
@@ -775,12 +752,11 @@ footer .footer-container .center .link .links a:hover {
   section#profile .profile-desc .desc h4 {
     text-align: center;
   }
-  #projects .projek-container .projek-card img, .pub-card img{
+  #projects .projek-container .projek-card img{
     width: 16rem;
   }
   
-  #projects .projek-container,
-  .pub-container {
+  #projects .projek-container{
     flex-wrap: nowrap;
     gap: 20px; /* Jarak antar kartu */
     padding: 1rem 2rem;
@@ -789,33 +765,18 @@ footer .footer-container .center .link .links a:hover {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
   }
-  .pub-container{
-    padding-left: 11rem;
-  }
-  #projects .projek-container .projek-card img,
-  .pub-card img {
+  
+  #projects .projek-container .projek-card img{
     width: 15rem;
   }
-  #projects .projek-container, .pub-container{
+  #projects .projek-container{
     gap: 60px;
   }
-  .pub-container{
-    padding-left: 17rem;
-  }
-  #publication {
-    height: 100%;
-  }
-
-
-
-
-
-  #blog .blog-container{
-    font-size: 18px;
-    margin-top: 0;
-    padding: 0;
-  }
   
+
+
+
+
 
 
 
@@ -868,18 +829,7 @@ footer .footer-container .center .link .links a:hover {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
-#projects .projek-container .projek-card .hover-text,
-.pub-card .hover-text, .blog-card .hover-text{
-  opacity: 1;
-}
-#projects .projek-container .projek-card img,
-.pub-card img, .blog-card img{
-  filter: brightness(0.5); /* Make the image slightly darker */
-}
-#projects .projek-container .projek-card:hover img,
-.pub-card:hover img, .blog-card:hover img{
-  filter: brightness(0.5); /* Make the image slightly darker */
-}
+
 
 
 
@@ -896,7 +846,7 @@ footer .footer-container .center .link .links a:hover {
 
 
 /* Tablet */
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 701px) and (max-width: 768px) {
   nav .nav-menu ul{
     font-size: 12px;
     padding-left: 0;
@@ -907,18 +857,15 @@ footer .footer-container .center .link .links a:hover {
   section#home{
     width: 100%;
   }
-  #home .home-page .connect{
-    padding-left: 2rem;
-  }
   #home .home-page .connect .text-connect{
     width: 29%;
   }
 
   section#profile .profile-img img{
-    width: 12rem;
+    width: 14rem;
   }
   section#profile .profile-desc .desc{
-    width: 100%;
+    width: 90%;
   }
   section#profile .profile-desc{
     padding-left: 2rem;
@@ -926,25 +873,21 @@ footer .footer-container .center .link .links a:hover {
   section#profile .profile-img{
     width: 35%;
   }
-  #projects .projek-container, .pub-container{
+  #projects .projek-container{
     justify-content: space-evenly;
   }
-  #projects .projek-container, .pub-container{
+  #projects .projek-container{
     padding: 0;
     gap: 6rem 0;
   }
-  #projects .projek-container .projek-card, .pub-container .pub-card{
+  #projects .projek-container .projek-card{
     width: 13rem;
     height: 20rem;
+    margin: 0 3rem;
   }
 
-  .pub-container .pub-card img{
-    width: 100%;
-    height: 100%;
-  }
-  #blog .blog-container{
-    font-size: 2rem;
-  }
+  
+
   footer .footer-container .left .text-left .sosmed a{
     padding: .5rem;
   }
@@ -956,3 +899,21 @@ footer .footer-container .center .link .links a:hover {
     padding-left: 0;
   }
 }
+@media (min-width: 769px) and (max-width: 900px) {
+  #projects .projek-container{
+    padding: 0 3rem;
+  }
+  
+  section#profile .profile-img img{
+    width: 18rem;
+  }
+  section#profile .profile-desc{
+    width: 58%;
+    padding-left: 3rem;
+  }
+  section#profile .profile-desc .desc{
+    width: 100%;
+  }
+}
+
+

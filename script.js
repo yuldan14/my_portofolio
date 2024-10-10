@@ -98,8 +98,11 @@ const cards = document.querySelectorAll('.galeri-card');
 const totalCards = cards.length;
 
 function showNextImage() {
+  const galeriContainer = document.querySelector('.galeri-container');
+  const containerWidth = galeriContainer.offsetWidth; // Lebar dinamis dari .galeri-container
+
     currentIndex = (currentIndex + 1) % totalCards; // Loop kembali ke gambar pertama jika sudah sampai akhir
-    const offset = -currentIndex * 300; // 300px adalah lebar tiap gambar
+    const offset = -currentIndex * containerWidth; // 300px adalah lebar tiap gambar
     cards.forEach(card => {
         card.style.transform = `translateX(${offset}px)`;
     });
