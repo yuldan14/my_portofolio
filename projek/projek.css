@@ -79,7 +79,7 @@
   width: 300px; /* Sesuaikan dengan lebar gambar */
   height: 200px; /* Sesuaikan dengan tinggi gambar */
   position: relative;
-  border-radius:30px
+  border-radius: 30px;
 }
 
 .galeri-card {
@@ -97,5 +97,17 @@ ol li{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 0 2rem;
   text-align: justify;
+}
+@media(min-width: 650px){
+  .galeri-container{
+    width: 600px;
+    height: 400px;
+  } 
+  .projek-kontainer .head-img img{
+    width: 40rem;
+  }
+  .path{
+    font-size: 14px;
+  }
 }
 
