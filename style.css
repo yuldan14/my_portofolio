@@ -628,7 +628,7 @@ footer .footer-container .center .link .links a:hover {
   filter: brightness(0.5); /* Make the image slightly darker */
 }
 #projects .projek-card .hover-text p.pub{
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 
