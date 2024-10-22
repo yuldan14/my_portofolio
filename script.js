@@ -1,112 +1,197 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    const navMenu = document.getElementById('nav-menu'); // Pastikan ini merujuk ke elemen yang benar
 
+    // Fungsi untuk toggle menu
+    const toggleMenu = () => {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('toggle');
+        document.body.classList.toggle('menu-open'); // Mencegah scrolling saat menu terbuka
+    };
 
+    // Event listener untuk klik pada burger
+    burger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Mencegah event click bubble ke document
+        toggleMenu();
+    });
 
+    // Menutup menu jika mengklik di luar area menu
+    document.addEventListener('click', (event) => {
+        const isClickInsideMenu = navLinks.contains(event.target); // Cek apakah klik di dalam menu
+        const isClickOnBurger = burger.contains(event.target); // Cek apakah klik pada burger
 
-
-
-// muncul
-const sectionsMuncul = document.querySelectorAll('section');
-const navLinksMuncul = document.querySelectorAll('.nav-menu ul li a');
-let profileShown = false; // Flag to track if the profile has been shown
-
-window.addEventListener('scroll', () => {
-  let current = '';
-
-  sectionsMuncul.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 60) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinksMuncul.forEach(link => {
-    link.classList.remove('active');
-    if (link.hash === '#' + current) {
-      link.classList.add('active');
-    }
-  });
-
-  // Check if the profile section is in view
-  const profileSection = document.getElementById('profile');
-  if (profileSection) {
-    const profileTop = profileSection.offsetTop;
-    const profileBottom = profileTop + profileSection.offsetHeight;
-
-    if (scrollY >= profileTop && scrollY <= profileBottom && !profileShown) {
-      // Profile section is in view, add the 'show' class
-      document.querySelector('#profile .desc').classList.add('show');
-      document.querySelector('#profile .profile-img').classList.add('show');
-      profileShown = true; // Set the flag to true after showing the profile
-    } 
-  }
-});
-
-
-
-
-// pointer
-const pointer = document.querySelector('.pointer');
-document.addEventListener('mousemove', (event) => {
-    pointer.style.left = event.clientX + 'px';
-    pointer.style.top = event.clientY + 'px';
-
-    // Check if the pointer is over an element with the same color
-    const element = document.elementFromPoint(event.clientX, event.clientY);
-    if (element) {
-        const elementStyle = getComputedStyle(element);
-        const pointerStyle = getComputedStyle(pointer);
-        if (elementStyle.backgroundColor === pointerStyle.backgroundColor) {
-            pointer.classList.add('inverse');
-        } else {
-            pointer.classList.remove('inverse');
+        if (!isClickInsideMenu && !isClickOnBurger) {
+            // Jika klik di luar menu dan burger, tutup menu
+            navLinks.classList.remove('active');
+            burger.classList.remove('toggle');
+            document.body.classList.remove('menu-open'); // Re-enable scrolling
         }
-    }
+    });
 });
 
 
 
 
-// Burger menu
+// IndexedDB
+// Inisialisasi IndexedDB
+function initIndexedDB() {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open('shoppingCartDB', 1);
 
+        request.onerror = (event) => {
+            console.error('IndexedDB error:', event);
+            reject('Error opening IndexedDB');
+        };
 
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('nav-links');
+        request.onsuccess = (event) => {
+            console.log('IndexedDB opened successfully');
+            resolve(event.target.result);
+        };
 
-// Toggle menu function
-const toggleMenu = () => {
-    navLinks.classList.toggle('active');
-    burger.classList.toggle('toggle');
-};
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+            // Buat object store bernama 'cart' dengan keyPath 'id'
+            const objectStore = db.createObjectStore('cart', { keyPath: 'id', autoIncrement: true });
+            objectStore.createIndex('name', 'name', { unique: false });
+            objectStore.createIndex('price', 'price', { unique: false });
+            objectStore.createIndex('image', 'image', { unique: false });
+        };
+    });
+}
+// Fungsi untuk menambahkan data ke IndexedDB
+function addToCart(product) {
+    initIndexedDB().then((db) => {
+        const transaction = db.transaction(['cart'], 'readwrite');
+        const objectStore = transaction.objectStore('cart');
 
-// Burger menu click event
-burger.addEventListener('click', () => {
-    toggleMenu();
+        // Menambahkan data produk ke IndexedDB
+        objectStore.add(product);
+
+        transaction.oncomplete = () => {
+            console.log('Produk berhasil ditambahkan ke cart');
+        };
+
+        transaction.onerror = (event) => {
+            console.error('Error adding product to cart:', event);
+        };
+    }).catch((error) => {
+        console.error('IndexedDB error:', error);
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const cartButtons = document.querySelectorAll('.lihat-detail a i[data-feather="shopping-cart"]');
+
+    cartButtons.forEach((button) => {
+        button.parentElement.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            // Ambil elemen card produk terkait
+            const card = event.target.closest('.card-produk');
+            const productImage = card.querySelector('.card-image img').src;
+            const productName = card.querySelector('.nama-produk h5').innerText;
+            const productPrice = card.querySelector('.harga-produk b').innerText;
+
+            // Buat object produk untuk disimpan di IndexedDB
+            const product = {
+                name: productName,
+                price: productPrice,
+                image: productImage
+            };
+
+            // Tambahkan produk ke IndexedDB
+            addToCart(product);
+
+            alert(`${productName} berhasil ditambahkan ke keranjang`);
+        });
+    });
 });
+// Fungsi untuk mengambil semua data dari IndexedDB
+function getCartData() {
+    return new Promise((resolve, reject) => {
+        initIndexedDB().then((db) => {
+            const transaction = db.transaction(['cart'], 'readonly');
+            const objectStore = transaction.objectStore('cart');
+            const request = objectStore.getAll();
 
-// Close menu when clicking outside
-document.addEventListener('click', (event) => {
-    const target = event.target;
-    const isNavMenu = target.closest('.nav-menu');
+            request.onsuccess = (event) => {
+                resolve(event.target.result);
+            };
 
-    if (!isNavMenu) {
-        navLinks.classList.remove('active');
-        burger.classList.remove('toggle');
-    }
-});
-let currentIndex = 0;
-const cards = document.querySelectorAll('.galeri-card');
-const totalCards = cards.length;
+            request.onerror = (event) => {
+                console.error('Error fetching data from cart:', event);
+                reject('Error fetching data');
+            };
+        });
+    });
+}
+function addToCartTable(product) {
+    const cartTable = document.getElementById('cart-table'); // Pastikan tabel cart memiliki id="cart-table"
 
-function showNextImage() {
-  const galeriContainer = document.querySelector('.galeri-container');
-  const containerWidth = galeriContainer.offsetWidth; // Lebar dinamis dari .galeri-container
+    // Buat elemen <tr> baru
+    const row = document.createElement('tr');
 
-    currentIndex = (currentIndex + 1) % totalCards; // Loop kembali ke gambar pertama jika sudah sampai akhir
-    const offset = -currentIndex * containerWidth; // 300px adalah lebar tiap gambar
-    cards.forEach(card => {
-        card.style.transform = `translateX(${offset}px)`;
+    // Set konten dari <tr> dengan data produk
+    row.innerHTML = `
+        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"></td>
+        <td id="foto-barang">
+            <img src="${product.image}" alt="">
+        </td>
+        <td class="namaProduk">${product.name}</td>
+        <td>
+            <select name="size" id="size">
+                <option value="S">Ukuran - S</option>
+                <option value="M">Ukuran - M</option>
+                <option value="L">Ukuran - L</option>
+            </select>
+        </td>
+        <td id="jumlah">
+            <button id="minus">−</button>
+            <input type="number" value="1" id="input" readonly onchange="updateTotal()" />
+            <button id="plus">+</button>
+        </td>
+        <td><input type="text" name="total-harga" id="total-harga" value="${product.price}" readonly></td>
+    `;
+
+    // Tambahkan <tr> ke tabel
+    cartTable.appendChild(row);
+}
+// Fungsi untuk memuat data keranjang belanja dari IndexedDB dan menampilkannya di tabel
+function loadCart() {
+    getCartData().then((products) => {
+        products.forEach((product) => {
+            addToCartTable(product);
+        });
     });
 }
 
-setInterval(showNextImage, 1500); // Pindah gambar setiap 4 detik
+// Panggil fungsi ini saat halaman selesai dimuat
+document.addEventListener('DOMContentLoaded', () => {
+    loadCart();
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const cartButtons = document.querySelectorAll('.lihat-detail a i[data-feather="shopping-cart"]');
 
+    cartButtons.forEach((button) => {
+        button.parentElement.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            // Ambil elemen card produk terkait
+            const card = event.target.closest('.card-produk');
+            const productImage = card.querySelector('.card-image img').src;
+            const productName = card.querySelector('.nama-produk h5').innerText;
+            const productPrice = card.querySelector('.harga-produk b').innerText;
+
+            // Buat object produk untuk disimpan di IndexedDB
+            const product = {
+                name: productName,
+                price: productPrice,
+                image: productImage
+            };
+
+            // Tambahkan produk ke IndexedDB dan langsung ke tabel
+            addToCart(product);  // Simpan ke IndexedDB
+            addToCartTable(product);  // Tambahkan ke tabel
+        });
+    });
+});
